@@ -1,0 +1,17 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier" // Asegúrate de que esté al final
+  ],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "rules": {
+    "prettier/prettier": "error", // Marca los problemas de Prettier como errores
+    "react/react-in-jsx-scope": "off" // Recomendado si usas React 17+
+  }
+}
