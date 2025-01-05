@@ -55,7 +55,7 @@ const BudgetDetail: React.FC = () => {
   }
 
   return (
-    <Stack gap="10">
+    <Stack gap="10" width="100%">
       <Button
         size="xs"
         color="white"
@@ -65,6 +65,7 @@ const BudgetDetail: React.FC = () => {
         <AiOutlineArrowLeft />
         Back to Budgets
       </Button>
+
       <h1>{budget.name}</h1>
       <h2>Incomes</h2>
 
