@@ -18,6 +18,7 @@ import {
 import { Field } from '@/components/ui/field';
 
 import BudgetsSkeleton from '../skeletons/BudgetsSkeleton';
+import DeleteConfirmationPopover from '../DeleteConfirmationPopover';
 
 interface Budget {
   _id: string;
@@ -147,12 +148,14 @@ const Budgets: React.FC = () => {
               >
                 <AiFillFolderOpen />
               </Button>
-              <Button
-                variant="outline"
-                onClick={() => handleOnBudgetDelete(budget._id)}
+              <DeleteConfirmationPopover
+                confirmationText={budget.name}
+                deleteCallback={() => handleOnBudgetDelete(budget._id)}
               >
-                <AiFillDelete />
-              </Button>
+                <Button variant="outline">
+                  <AiFillDelete />
+                </Button>
+              </DeleteConfirmationPopover>
             </Card.Footer>
           </Card.Root>
         )}

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { getBudgetById } from '@/services/budgetService';
 import { HStack, Stack, Table } from '@chakra-ui/react';
-import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { AiFillEdit, AiFillDelete, AiOutlineArrowLeft } from 'react-icons/ai';
 
