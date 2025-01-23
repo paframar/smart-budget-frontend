@@ -3,7 +3,6 @@ import { catchAsync } from '@/utilities/catchAsync';
 
 export const getBudgets = catchAsync(async () => {
   const response = await api.get('/budgets');
-  0;
   console.log('response -- ', response);
   return response.data.data;
 }, 'Failed to fetch budgets.');
